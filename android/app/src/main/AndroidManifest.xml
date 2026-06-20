@@ -1,8 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.hinglish.dictate">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permissions required for the app -->
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -17,13 +15,7 @@
         android:icon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/LaunchTheme"
-        tools:targetApi="34">
-
-        <!-- Overlay/System Alert Window service -->
-        <service
-            android:name="com.hinglish.dictate.OverlayService"
-            android:exported="false"
-            android:foregroundServiceType="microphone" />
+        tools:targetApi="35">
 
         <activity
             android:name=".MainActivity"
@@ -40,9 +32,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <meta-data
-            android:name="flutterEmbedding"
-            android:value="2" />
     </application>
 </manifest>
