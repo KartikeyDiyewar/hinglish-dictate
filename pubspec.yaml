@@ -10,37 +10,20 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Speech recognition via Google Speech or Gemini
-  # Using device's built-in speech recognizer for zero-cost Hinglish support
+  # Speech recognition via device's built-in engine
   speech_to_text: ^6.6.2
 
   # Permissions (mic, overlay, notification)
   permission_handler: ^11.3.0
 
-  # Floating overlay / system alert window
-  # We use overlay_service for Android system overlay
-  overlay_windows: ^0.3.0
-
   # Local storage for API key and settings
   shared_preferences: ^2.2.3
 
-  # Clipboard access
-  clipboard: ^0.1.3
-
-  # HTTP for Gemini API calls (fallback)
+  # HTTP for Gemini API calls
   http: ^1.2.1
-
-  # JSON serialization
-  json_annotation: ^4.9.0
 
   # Vibrate on recording start/stop (haptic feedback)
   vibration: ^2.0.0
-
-  # Toast notifications
-  fluttertoast: ^8.2.4
-
-  # Notification service (foreground service notification)
-  flutter_local_notifications: ^17.2.3
 
 dev_dependencies:
   flutter_test:
@@ -49,5 +32,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  assets:
-    - assets/
