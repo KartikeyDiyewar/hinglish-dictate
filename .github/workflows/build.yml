@@ -23,6 +23,11 @@ jobs:
       - name: 🔍 Verify Flutter
         run: flutter doctor -v
 
+      - name: ✅ Accept Android Licenses
+        run: |
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+          flutter doctor --android-licenses || true
+
       - name: 📚 Get dependencies
         run: flutter pub get
 

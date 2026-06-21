@@ -24,7 +24,18 @@ android/app/build/
 android/build/
 *.apk
 *.aab
+*.jks
+*.keystore
+
+# iOS
+ios/.symlinks/
+ios/Pods/
+ios/build/
 
 # Secrets
 **/keys/
 *.key
+
+# Local properties
+android/local.properties
+local.properties
