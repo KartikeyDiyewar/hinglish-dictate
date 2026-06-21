@@ -133,18 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
     });
     _overlay.setRecording(false);
 
-    final text = _speech.stopListening();
-    // Try on-device first, fall back to Gemini API
-    try {
-      final result = await text;
-      if (result.isNotEmpty) {
-        _transcribedText = result;
-      }
-    } catch (_) {
-      // On-device failed; try Gemini if available
-      _errorMessage = 'On-device recognition failed.';
-    }
-
+    // The final text is already captured from the speech stream (_transcribedText)
     // Copy to clipboard
     if (_transcribedText.isNotEmpty) {
       await ClipboardService.copy(_transcribedText);

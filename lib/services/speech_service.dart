@@ -47,12 +47,14 @@ class SpeechService {
           onDone?.call();
         }
       },
-      localeId: locale,
-      listenMode: stt.ListenMode.dictation,
-      cancelOnError: true,
-      partialResults: true,
-      listenFor: const Duration(seconds: 30),
-      pauseFor: const Duration(seconds: 3),
+      listenOptions: stt.SpeechListenOptions(
+        localeId: locale,
+        listenMode: stt.ListenMode.dictation,
+        cancelOnError: true,
+        partialResults: true,
+        listenFor: const Duration(seconds: 30),
+        pauseFor: const Duration(seconds: 3),
+      ),
     );
 
     return controller.stream;

@@ -1,21 +1,21 @@
-# See https://www.dartlang.org/tools/pub/pubspec
 name: hinglish_dictate
 description: Hinglish speech-to-text dictation app. Floating overlay appears when keyboard is active.
 publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.2.0
+  sdk: ^3.5.0
 
 dependencies:
   flutter:
     sdk: flutter
 
-  speech_to_text: ^6.6.2
-  permission_handler: ^11.3.0
+  # Use latest versions that don't reference deleted Android v1 embedding
+  speech_to_text: ^7.4.0
+  permission_handler: ^12.0.3
   shared_preferences: ^2.2.3
   http: ^1.2.1
-  vibration: ^2.0.0
+  vibration: ^3.2.0
 
 dev_dependencies:
   flutter_test:
